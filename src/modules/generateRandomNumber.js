@@ -16,7 +16,7 @@ function generateRandomNumber() {
     if (randomNumber.toString().length === 4) {
       const uniqueDigits = new Set(randomNumber.toString());
 
-      if (uniqueDigits.size === 4 && !uniqueDigits.has('0')) {
+      if (uniqueDigits.size === 4) {
         isValid = true;
       }
     }

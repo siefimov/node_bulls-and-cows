@@ -17,22 +17,22 @@ function getBullsAndCows(userInput, numberToGuess) {
   let cows = 0;
 
   const userInputDigits = numberToGuess.toString().split('');
-  const nymberToGuessDigits = userInput.toString().split('');
+  const numberToGuessDigits = userInput.toString().split('');
 
   for (let i = 0; i < userInputDigits.length; i++) {
-    if (userInputDigits[i] === nymberToGuessDigits[i]) {
+    if (userInputDigits[i] === numberToGuessDigits[i]) {
       bulls++;
-      userInputDigits[i] = nymberToGuessDigits[i] = null;
+      userInputDigits[i] = numberToGuessDigits[i] = null;
     }
   }
 
   for (let i = 0; i < userInputDigits.length; i++) {
     if (
-      nymberToGuessDigits[i] !== null &&
-      userInputDigits.includes(nymberToGuessDigits[i])
+      numberToGuessDigits[i] !== null &&
+      userInputDigits.includes(numberToGuessDigits[i])
     ) {
       cows++;
-      userInputDigits[userInputDigits.indexOf(nymberToGuessDigits[i])] = null;
+      userInputDigits[userInputDigits.indexOf(numberToGuessDigits[i])] = null;
     }
   }
 
